@@ -4,3 +4,6 @@
 [submodule "dev/web-js_ab-nodes"]
 	path = dev/web-js_ab-nodes
 	url = https://github.com/allblue-pl/web-js_ab-nodes
+[submodule "dev/web-js_spocky"]
+	path = dev/web-js_spocky
+	url = https://github.com/allblue-pl/web-js_spocky

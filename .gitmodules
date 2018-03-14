@@ -1,0 +1,6 @@
+[submodule "dev/web-js_ab-layouts"]
+	path = dev/web-js_ab-layouts
+	url = https://github.com/allblue-pl/web-js_ab-layouts
+[submodule "dev/web-js_ab-nodes"]
+	path = dev/web-js_ab-nodes
+	url = https://github.com/allblue-pl/web-js_ab-nodes

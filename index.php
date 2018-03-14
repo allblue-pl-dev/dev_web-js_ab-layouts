@@ -20,14 +20,6 @@
     <?php require(__DIR__ . '/cache/abWeb/header.html'); ?>
 
     <script type="text/javascript">
-        function test(classDefinition) {
-            console.log(classDefinition.name);            
-        }
-
-        test(class MyAwesomeClass
-        {
-
-        });
         // const 
         //     abLayouts = jsLibs.require('ab-layouts')
         //     abNodes = jsLibs.require('ab-nodes');

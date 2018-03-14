@@ -1,5 +1,7 @@
 {
   "name": "dev_web-js_ab-layouts",
   "version": "0.0.1",
-  "dependencies": {}
+  "dependencies": {
+    "ab-web": "0.0.*"
+  }
 }

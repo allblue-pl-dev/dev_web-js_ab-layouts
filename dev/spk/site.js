@@ -1,8 +1,8 @@
 'use strict';
 
 spocky.package('site', ($app, $pkg) => {
-    const abPager = $pkg.import('ab-pager');
-    const js0 = $pkg.import('js0');
+    // const abPager = $app.import('ab-pager');
+    const js0 = $app.$import('js0');
 
     Object.defineProperty($pkg, 'layouts', {
         value: {
@@ -16,7 +16,7 @@ spocky.package('site', ($app, $pkg) => {
         }
     });
 
-    $pkg.export(
+    $pkg.$export(
     class Site extends spocky.Module {
 
         constructor()

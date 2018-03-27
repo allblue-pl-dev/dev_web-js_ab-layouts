@@ -11,5 +11,5 @@ abWeb.exec({
     },
 
     init: [ `./ab-web.js` ],
-    exts: [ 'header', 'sass', 'js', 'js-libs' ],
+    exts: [ 'header', 'sass', 'js', 'js-libs', 'spocky' ],
 });

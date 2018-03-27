@@ -2,6 +2,7 @@
   "name": "dev_web-js_ab-layouts",
   "version": "0.0.1",
   "dependencies": {
-    "ab-web": "0.0.*"
+    "ab-web": "0.0.*",
+    "ab-web_spocky": "0.0.*"
   }
 }

@@ -20,10 +20,15 @@
     <?php require(__DIR__ . '/cache/abWeb/header.html'); ?>
 
     <script type="text/javascript">
+        window.addEventListener('load', () => { spocky.init(true) });
+
         // const 
         //     abLayouts = jsLibs.require('ab-layouts')
         //     abNodes = jsLibs.require('ab-nodes');
+
+        //     site = jsLibs.require('site');
         // ;
+
             
         // let parser = new abLayouts.Parser();
         // let layoutNode = parser.parse([
@@ -72,9 +77,6 @@
         //     let show = layout.$show('repeatShow', keys);
         //     show.set(!show.get());
         // });
-
-        // let rootNode = new abNodes.RootNode('site');
-        // rootNode.add(layoutNode);
 
         // window.addEventListener('load', () => {
         //     rootNode.activate();

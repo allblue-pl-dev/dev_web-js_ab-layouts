@@ -3,50 +3,51 @@
 spocky.package('site', ($app, $pkg) => {
     // const abPager = $app.import('ab-pager');
     const js0 = $app.$import('js0');
+    const lemonBee = $app.$import('lemonBee');
 
-    Object.defineProperty($pkg, 'layouts', {
-        value: {
-            Site: class SiteLayout extends spocky.Layout {
-                constructor() {
-                    super([
-                        [ 'h1', 'Hello World!' ],
-                    ]);
-                }
-            },
-        }
-    });
+    $pkg.lb = new lemonBee.System();
 
     $pkg.$export(
     class Site extends spocky.Module {
 
         constructor()
         { super();
-            this.l1 = new spocky.Layout([
-                [ 'h1', 'Hello World 1' ],
-            ]);
-            this.l2 = new spocky.Layout([
-                [ 'h1', 'Hello World 2' ],
-            ]);
+            this._layout = new $pkg.$layouts[this.constructor.name]();
+            let f = this._layout.$fields;
+            f.title = 'Panel Title';
 
-            this.a();
+            f.repeat1().$push();
+            console.log(f.repeat1(0));
+            // this._layout.$fields.repeat1(0).repeat2().$push();
 
-            this.$view = null;
-        }
+            // this._layout.$elems.b1.addEventListener('click', (evt) => {
+            //     this._layout.$fields.repeat1().$push();
+            // });
+            // this._layout.$elems.b2.addEventListener('click', (evt) => {
+            //     this._layout.$fields.repeat1(0).repeat2().$push();
+            // });
 
-        a()
-        {
-            setTimeout(() => {
-                this.$view = this.l1;
-                this.b();
-            }, 100);
-        }
+            // this._layout.$holders.lb.$view = $pkg.lb.getModule_Main();
 
-        b()
-        {
-            setTimeout(() => {
-                this.$view = this.l2;
-                this.a();
-            }, 100);
+            // this._layout.$fields.repeat1 = [
+            //     {
+            //         title: '1. Title 1',
+            //         repeat2: [
+            //             {
+            //                 itemTitle2: '2. Title 1',
+            //             },
+            //         ],
+            //     }, {
+            //         title: '1. Title 2',
+            //         repeat2: [
+            //             {
+            //                 itemTitle2: '2. Title 2',
+            //             },
+            //         ],
+            //     }
+            // ];
+
+            this.$view = this._layout;
         }
 
     });

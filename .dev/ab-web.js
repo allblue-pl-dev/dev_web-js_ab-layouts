@@ -27,20 +27,21 @@ module.exports = {
             rel: '../tmp/js-libs/js-libs.min.js'
         },
         libs: {
-            'ab-fields':    '../dev/js_ab-fields',
-            'ab-nodes':     '../dev/web-js_ab-nodes',
-            'ab-layouts':   '../dev/web-js_ab-layouts',
+            'ab-fields':    '../dev/node_modules/ab-fields',
+            'ab-layouts':   '../dev/node_modules/ab-layouts',
+            'ab-nodes':     '../dev/node_modules/ab-nodes',
             'js0':          '../dev/node_modules/js0',
-            'spocky':       '../dev/web-js_spocky',
+            'spocky':       '../dev/node_modules/spocky',
 
             'test':         '../dev/test'
         },
     },
 
     'spocky': {
-        path: '../dev/web-js_spocky',
+        path: '../dev/node_modules/spocky',
         packages: [
             '../dev/spk',
+            '../dev/lemon-bee/spk',
         ],
     },
 };

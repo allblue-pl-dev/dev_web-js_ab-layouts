@@ -1,30 +1,36 @@
 
+<h1>Main Panel</h1>
+
 <!-- Main menu panel -->
 <!-- System header -->
 <div class="lb-header">
-	<!--<h2>
+	<h2>
 		<img ab-show="image" alt="title" src="{{image}}" />
 		<i ab-hide="image" class="fa {{faIcon}}"></i>
-		{{title}}
-	</h2>-->
+        ${eText('title')}: $title <br />
+        <span _show="show">SHOW</span>
+	</h2>
 </div>
 <!-- Main categories -->
 <div class="lb-menu-main mg-spacer-top-s row">
-    <$ _repeat="panels">
-        <div class="col-lg-3 col-sm-6 mg-spacer-bottom-s $class">
-            <h1>
-                <a class="btn btn-default mg-full" href="$uri">
-                    <img _show="image" src="$image" alt="$title" />
-                    $title
-                </a>
-            </h1>
-            <!--<div ab-repeat="panel.menu:subpanel" class="lb-menu-item {{subpanel.class}}">
-                <a href="{{panel.uri}}{{subpanel.alias}}" class="btn btn-default mg-full">
-                    <i class="fa {{subpanel.faIcon}}"></i><br />
-                    {{subpanel.title}}
-                </a>
-            </div>-->
-        </div>
-    </$>
+    <!-- <div _repeat="panels">
+        Test <br />
+    </div> -->
+    <div _repeat="panels:p" class="col-lg-3 col-sm-6 mg-spacer-bottom-s $class">
+        <h1>
+            Main title: $title
+            <span _show="_p.show">Show</span>
+            <a class="btn btn-default mg-full" href="$_p.uri">
+                <img _show="_p.image" src="$_p.image" alt="$_p.title" />
+                $_p.innerTitle
+            </a>
+        </h1>
+        <!--<div ab-repeat="panel.menu:subpanel" class="lb-menu-item {{subpanel.class}}">
+            <a href="{{panel.uri}}{{subpanel.alias}}" class="btn btn-default mg-full">
+                <i class="fa {{subpanel.faIcon}}"></i><br />
+                {{subpanel.title}}
+            </a>
+        </div>-->
+    </div>
 </div>
 <div class="mg-clear"></div>

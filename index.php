@@ -20,66 +20,40 @@
     <?php require(__DIR__ . '/cache/abWeb/header.html'); ?>
 
     <script type="text/javascript">
-        window.addEventListener('load', () => { spocky.init(true) });
-
-        // const 
-        //     abLayouts = jsLibs.require('ab-layouts')
-        //     abNodes = jsLibs.require('ab-nodes');
-
-        //     site = jsLibs.require('site');
-        // ;
-
-            
-        // let parser = new abLayouts.Parser();
-        // let layoutNode = parser.parse([
-        //     [ 'h1', 'Hello World', ],
-        //     [ 'button', { _elem: 'button1', }, 'Button 1'],
-        //     [ 'h2', { _show: 'showTest' }, `I'm here!` ],
-        //     [ 'button', { _elem: 'button2' }, 'Button 2'],
-        //     [ 'br' ],
-        //     'Hello World:',
-        //     [ 'ul:', [
-        //         [ '_repeat', { _repeat: 'repeat1' }, [
-        //             [ 'button', { _elem: 'button3' } ],
-        //             [ 'li', { _show: 'repeatShow' } ],
-        //             [ 'li', '$field1' ],
-        //             [ 'li', '$field2a', ' [and] ', '$field2b' } ],
-        //         ],
-        //     ]],
-        // ]);
-
-        // layout.$repeat('repeat1').size = 2;
-        // layout.$fields('field1').set('Hello World');   
-        // layout.$fields = {
-        //     0: {
-        //         field1: 'Hello World!',
-        //     }, 
-        //     1: {
-        //         field1: 'Goodbye World',
-        //     },
-        // };
-
-        // layout.$elem('button1', (elem, keys) => {
-        //     elem.addEventListener('click', (evt) => {
-        //         evt.preventDefault();
-        //         layout.$show('showTest').set(!layout.$show('showTest').get());
-        //     });
-        // });
-
-        // layout.$elem('button2', (elem, keys) => {
-        //     elem.addEventListener('click', (evt) => {
-        //         evt.preventDefault();
-        //         console.log('Button 1: ', keys);
-        //     });
-        // });
-
-        // layout.$elem('button3', (elem, keys) => {
-        //     let show = layout.$show('repeatShow', keys);
-        //     show.set(!show.get());
-        // });
+        window.addEventListener('load', () => { jsLibs.require('site').spk.init(true) });
 
         // window.addEventListener('load', () => {
-        //     rootNode.activate();
+        //     const abNodes = require('ab-nodes');
+
+        //     let r = new abNodes.RootNode(document.getElementById('site'));
+
+        //     let r1 = new abNodes.RepeatNode();
+        //     let t1 = new abNodes.TextNode('R1');
+
+        //     let r2 = new abNodes.RepeatNode();
+        //     let t2 = new abNodes.TextNode('R2');
+            
+        //     r2.pChildren.add(t2);
+
+        //     r1.pChildren.add(t1);
+        //     r1.pChildren.add(r2);
+
+        //     r.pChildren.add(r1);
+
+        //     r.activate();
+
+        //     r1.add(0);
+        //     r1.add(1);
+
+        //     let r2Copies = r2.pCopyable.getNodeCopies([ 0 ]);
+        //     for (let i = 0; i < r2Copies.length; i++)
+        //         r2Copies[i].add(0);
+
+        //     // r2Copies = r2.pCopyable.getNodeCopies([ 1 ]);
+        //     // for (let i = 0; i < r2Copies.length; i++)
+        //     //     r2Copies[i].add(0);
+
+        //     console.log('Done');
         // });
     </script>
 </head>

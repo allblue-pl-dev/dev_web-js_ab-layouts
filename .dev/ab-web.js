@@ -3,8 +3,8 @@
 module.exports = {
     'sass': {
         paths: [
+            '../dev/git/css_magda-styles/scss',
             '../dev/node_modules/ab-bootstrap/scss', 
-
             '../dev/node_modules/spk-lemon-bee/sass'
 
             // '../esite/packages/site/Web/scss/test.scss',
@@ -44,7 +44,7 @@ module.exports = {
         path: '../dev/node_modules/spocky',
         packages: [
             '../dev/site',
-            '../dev/node_modules/spk-lemon-bee'
+            // '../dev/node_modules/spk-lemon-bee'
         ],
     },
 };

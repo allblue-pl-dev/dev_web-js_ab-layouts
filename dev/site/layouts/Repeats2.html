@@ -1,0 +1,26 @@
+
+<h2>Repeats 2</h2>
+
+<!-- Vars:<br />
+ - Var Before: $varBefore<br />
+ - Var After: $varAfter<br /> -->
+
+<br />
+Repeat 1:<br />
+<$ _repeat="repeat1:r1">
+    <b>New:</b><br />
+    <!-- &nbsp;- Var Before = $varBefore<br />
+    &nbsp;- Var After = $varAfter<br /> -->
+    &nbsp;- <b>Repeat 2:</b><br />
+    <$ _repeat="r1:r2">
+        &nbsp;&nbsp;&nbsp;- r2 = $r2.test<br />
+        <!-- &nbsp;&nbsp;&nbsp;- Repeat 3:<br />
+        <$ _repeat="repeat3:r3">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- r3: $r3.test<br />
+        </$> -->
+    </$>
+    <!-- &nbsp;- Repeat 3:<br />
+    <$ _repeat="repeat3:r3">
+        &nbsp;&nbsp;&nbsp;- r3: $r3.test<br />
+    </$> -->
+</$>

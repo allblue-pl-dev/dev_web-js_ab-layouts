@@ -10,3 +10,6 @@
 [submodule "dev/js_ab-fields"]
 	path = dev/js_ab-fields
 	url = https://github.com/allblue-pl/js_ab-fields
+[submodule "dev/git/css_magda-styles"]
+	path = dev/git/css_magda-styles
+	url = https://github.com/allblue-pl/css_magda-styles
